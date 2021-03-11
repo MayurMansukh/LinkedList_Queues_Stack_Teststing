@@ -34,4 +34,14 @@ public class LinkedListTest {
 
         list.displayList();
     }
+
+    @Test
+    public void addAtEnd() {
+        System.out.println("insert  node at last postion");
+        list.addAtEnd(56);
+        list.addAtEnd(30);
+        list.addAtEnd(70);
+
+        list.displayList();
+    }
 }

@@ -43,6 +43,20 @@ public class LinkedList<T> {
         }
     }
 
+    public void addAtEnd(T data) { //add nodes at end postion of Linked List
+        Node<T> newNode = new Node<T>(data);
+        if(head == null) {
+
+            head = newNode;
+            tail = newNode;
+        }
+        else {
+            tail.Next = newNode;
+            tail = newNode;
+        }
+    }
+
+
     public void displayList() { // display linked List
         Node<T> current=head;
 
