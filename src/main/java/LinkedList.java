@@ -170,6 +170,37 @@ public class LinkedList<T> {
         prev.Next = temp.Next;
     }
 
+    public <T> void sortList() // sort linked list in ascending order
+    {
+        Node current=head;
+        Node index=null;
+        T temp;
+
+        if(head == null)
+        {
+            return;
+        }
+        else
+        {
+            while(current != null)
+            {
+                index=current.Next;
+                while(index != null)
+                {
+                    if(((Comparable<T>) current.data).compareTo((T) index.data)>0)
+                    {
+                        temp=(T) current.data;
+                        current.data=index.data;
+                        index.data=temp;
+                    }
+                    index=index.Next;
+                }
+                current=current.Next;
+            }
+        }
+    }
+
+
 
 
     public void displayList() { // display linked List
