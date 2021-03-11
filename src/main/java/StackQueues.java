@@ -7,4 +7,9 @@ public class StackQueues<T extends Comparable> {
         this.listadd.addAtEnd(value);
         this.listadd.displayList();
     }
+    public void pop()
+    {
+        this.listadd.deleteFirstElement();
+        this.listadd.displayList();
+    }
 }
