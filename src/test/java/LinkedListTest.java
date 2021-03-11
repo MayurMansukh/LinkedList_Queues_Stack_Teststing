@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -88,6 +89,19 @@ public class LinkedListTest {
         list.addAtEnd(70);
         list.displayList();
 
-        list.searchNode(30);
+        int result= (int)list.searchNode(30);
+        Assert.assertEquals(30,result);
+    }
+    @Test
+    public void insertAfter() {
+
+        list.addAtEnd(56);
+        list.addAtStart(30);
+        list.addAtEnd(70);
+        list.displayList();
+        System.out.println("Insertinng after 30");
+        int result=(int)list.insertAfter(list.head.Next,40);
+        list.displayList();
+        Assert.assertEquals(40,result);
     }
 }

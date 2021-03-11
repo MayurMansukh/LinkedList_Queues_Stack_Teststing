@@ -137,6 +137,20 @@ public class LinkedList<T> {
             System.out.println("Element is not present in the list");
     }
 
+    public void insertAfter(Node<T> prev_node, T new_data) // add node after given node
+    {
+        if (prev_node == null)
+        {
+            System.out.println("The given previous node cannot be null");
+            return;
+        }
+        Node<T> new_node = new Node<T>(new_data);
+
+        new_node.Next = prev_node.Next;
+
+        prev_node.Next = new_node;
+    }
+
 
     public void displayList() { // display linked List
         Node<T> current=head;
