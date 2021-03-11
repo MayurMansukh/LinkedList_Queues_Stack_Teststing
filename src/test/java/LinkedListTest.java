@@ -24,4 +24,14 @@ public class LinkedListTest {
         list.displayList();
 
     }
+
+    @Test
+    public void addAtStart() {
+        System.out.println("insert  node at first postion");
+        list.addAtStart(56);
+        list.addAtStart(30);
+        list.addAtStart(70);
+
+        list.displayList();
+    }
 }

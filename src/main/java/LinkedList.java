@@ -27,6 +27,22 @@ public class LinkedList<T> {
         tail=newNode;
 
     }
+
+    public void addAtStart(T data) { // add nodes at first postion in LinkedList
+
+        Node<T> newNode = new Node<T>(data);
+
+        if(head == null) {
+            head = newNode;
+            tail = newNode;
+        }
+        else {
+            Node temp = head;
+            head = newNode;
+            head.Next = temp;
+        }
+    }
+
     public void displayList() { // display linked List
         Node<T> current=head;
 
