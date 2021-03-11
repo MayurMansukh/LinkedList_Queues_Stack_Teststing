@@ -93,6 +93,26 @@ public class LinkedList<T> {
         }
     }
 
+    public void deleteLastElement() { // delete last element in list
+        if(head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+        else {
+            if(head != tail ) {
+                Node current = head;
+                while(current.Next != tail) {
+                    current = current.Next;
+                }
+                tail = current;
+                tail.Next = null;
+            }
+            else {
+                head = tail = null;
+            }
+        }
+    }
+
 
     public void displayList() { // display linked List
         Node<T> current=head;
