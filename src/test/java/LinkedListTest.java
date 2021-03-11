@@ -79,4 +79,15 @@ public class LinkedListTest {
         list.deleteLastElement();
         list.displayList();
     }
+
+    @Test
+    public void searchNode() {
+
+        list.addAtEnd(56);
+        list.addAtStart(30);
+        list.addAtEnd(70);
+        list.displayList();
+
+        list.searchNode(30);
+    }
 }
