@@ -12,7 +12,7 @@ public class StackQueuesTest {
     }
 
     @Test
-    public void push_at_back()
+    public void aadAtEnd()
     {
         stackqueue.push(56);
         stackqueue.push(30);
@@ -32,6 +32,14 @@ public class StackQueuesTest {
             stackqueue.pop();
             i++;
         }
+    }
+
+    @Test
+    public void AddAtEnd()
+    {
+        stackqueue.queue_push(56);
+        stackqueue.queue_push(30);
+        stackqueue.queue_push(70);
     }
 }
 

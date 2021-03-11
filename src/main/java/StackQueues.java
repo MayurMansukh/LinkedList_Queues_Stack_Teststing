@@ -12,4 +12,9 @@ public class StackQueues<T extends Comparable> {
         this.listadd.deleteFirstElement();
         this.listadd.displayList();
     }
+    public void queue_push(T value)
+    {
+        this.listadd.addAtEnd(value);
+        this.listadd.displayList();
+    }
 }
