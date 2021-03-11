@@ -41,5 +41,20 @@ public class StackQueuesTest {
         stackqueue.queue_push(30);
         stackqueue.queue_push(70);
     }
+
+    @Test
+    public void deleteAtfirst()
+    {
+        int i=0;
+        stackqueue.queue_push(56);
+        stackqueue.queue_push(30);
+        stackqueue.queue_push(70);
+        System.out.println("After deleting");
+        while(i<3)
+        {
+            stackqueue.queue_pop();
+            i++;
+        }
+    }
 }
 
