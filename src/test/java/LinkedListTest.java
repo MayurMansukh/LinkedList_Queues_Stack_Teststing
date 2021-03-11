@@ -104,4 +104,15 @@ public class LinkedListTest {
         list.displayList();
         Assert.assertEquals(40,result);
     }
+
+    @Test
+    public void deleteGivenNode(){
+        list.addNode(56);
+        list.addNode(30);
+        list.addNode(70);
+        System.out.println("After deleting");
+        int result=(int)list.deleteGivenNode(30);
+        list.displayList();
+        Assert.assertEquals(30,result);
+    }
 }

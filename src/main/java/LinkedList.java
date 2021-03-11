@@ -151,6 +151,26 @@ public class LinkedList<T> {
         prev_node.Next = new_node;
     }
 
+    void deleteGivenNode(T key) // delete given node in linked list
+    {
+
+        Node<T> temp = head, prev = null;
+
+        if (temp != null && temp.data == key) {
+            head = temp.Next;
+            return;
+        }
+        while (temp != null && temp.data != key) {
+            prev = temp;
+            temp = temp.Next;
+        }
+        if (temp == null)
+            return;
+
+        prev.Next = temp.Next;
+    }
+
+
 
     public void displayList() { // display linked List
         Node<T> current=head;
