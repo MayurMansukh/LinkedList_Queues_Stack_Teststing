@@ -23,6 +23,10 @@ public class LinkedListTest {
         list.addNode(70);
 
         list.displayList();
+         boolean result = list.head.getKey().equals(56) &&
+                list.head.next.getKey().equals(30) &&
+                list.tail.getKey().equals(70);
+        Assert.assertTrue(result);
 
     }
 
@@ -34,6 +38,10 @@ public class LinkedListTest {
         list.addAtStart(70);
 
         list.displayList();
+        boolean result = list.head.getKey().equals(56) &&
+                list.head.next.getKey().equals(30) &&
+                list.tail.getKey().equals(70);
+        Assert.assertTrue(result);
     }
 
     @Test
@@ -44,6 +52,10 @@ public class LinkedListTest {
         list.addAtEnd(70);
 
         list.displayList();
+        boolean result = list.head.getKey().equals(56) &&
+                list.head.next.getKey().equals(30) &&
+                list.tail.getKey().equals(70);
+        Assert.assertTrue(result);
     }
 
     @Test
@@ -55,6 +67,10 @@ public class LinkedListTest {
 
         list.addAtmiddle(30,1);
         list.displayList();
+        boolean result = list.head.getKey().equals(56) &&
+                list.head.next.getKey().equals(30) &&
+                list.tail.getKey().equals(70);
+        Assert.assertTrue(result);
     }
 
     @Test
@@ -67,6 +83,9 @@ public class LinkedListTest {
 
         list.deleteFirstElement();
         list.displayList();
+        boolean result = list.head.getKey().equals(30) &&
+                list.tail.getKey().equals(70);
+        Assert.assertTrue(result);
     }
 
     @Test
@@ -124,5 +143,8 @@ public class LinkedListTest {
         System.out.println("After sorting");
         list.sortList();
         list.displayList();
+        boolean result = list.head.getKey().equals(30) &&
+                list.tail.getKey().equals(70);
+        Assert.assertTrue(result);
     }
 }
